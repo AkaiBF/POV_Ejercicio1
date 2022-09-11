@@ -1,0 +1,28 @@
+﻿@page "/"
+
+
+<style>
+    .area {
+        margin: 2.5em 0.5em 0 0.5em;
+    }
+
+    #GameArea {
+        padding: 2em;
+        border: 2px solid black;
+    }
+</style>
+
+<PageTitle>Counter</PageTitle>
+
+<div id="UIArea" class="area">
+    <h1>Counter</h1>
+
+    <p>Current count: @currentCount</p>
+
+    <button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+</div>
+
+<div id="GameArea" class="area">
+    <BECanvas Width="500" Height="500" @ref="_canvasReference"></BECanvas>
+</div>
+
